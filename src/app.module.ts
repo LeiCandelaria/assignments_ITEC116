@@ -9,4 +9,6 @@ import { assgnmntModule } from './assgnmnt/assgnmnt.module';
   controllers: [AppController, assgnmntController],
   providers: [AppService],
 })
-export class AppModule {}
+export class AppModule {
+  
+}
