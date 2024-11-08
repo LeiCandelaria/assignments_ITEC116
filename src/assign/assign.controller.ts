@@ -4,14 +4,14 @@ import { Controller, Get, Param } from '@nestjs/common';
 export class AssignController {
   
   @Get('primecheck/:number')
-  checkPrime(@Param('number') number: string): { isPrime: boolean } {
-    const num = parseInt(number, 10);
+  checkPrimeNum(@Param('number') number: string): { isPrime: boolean } {
+    const num = parseInt(number, 20);
     const isPrime = this.isPrime(num);
-    return { isPrime };
+    return { isPrime }; // This retrieves the number and checks it if it is a Prime Number//
   }
 
   private isPrime(num: number): boolean {
-    if (num <= 1) return false; // Numbers less than or equal to 1 are not prime
+    if (num <= 1) return false; // Numbers less than or equal to 1 are not prime//
     if (num === 2 || num === 3) return true; // 2 and 3 are prime numbers
     if (num % 2 === 0 || num % 3 === 0) return false; // Eliminate multiples of 2 and 3
 
