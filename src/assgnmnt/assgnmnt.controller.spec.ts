@@ -4,7 +4,7 @@ import { AssgnmntController } from './assgnmnt.controller';
 describe('AssgnmntController', () => {
   let controller: AssgnmntController;
 
-  beforeEach(async () => {
+  beforeEach(async ( ) => {
     const module: TestingModule = await Test.createTestingModule({
       controllers: [AssgnmntController],
     }).compile();
@@ -12,7 +12,7 @@ describe('AssgnmntController', () => {
     controller = module.get<AssgnmntController>(AssgnmntController);
   });
 
-  it('should be defined', () => {
+  it('should be defined', ( ) => {
     expect(controller).toBeDefined();
   });
 });
