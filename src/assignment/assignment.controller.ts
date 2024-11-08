@@ -5,10 +5,10 @@ export class AssignmentsController {
   @Get('fibonacci/:n')
   getFibnacci(@Param('n', ParseIntPipe) n: number): { fibsequences: number[] } {
     const fibsequences = this.generateFibonacci(n);
-    return {fibsequences };
+    return {fibsequences }; //Getting a number for a sequence//
   }
 
-  private generateFibonacci(n: number): number[] {
+  public generateFibonacci(n: number): number[] {
     if (n <= 0) return [];
     if (n === 1) return [0];
 
